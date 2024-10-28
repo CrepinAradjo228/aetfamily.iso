@@ -1,0 +1,309 @@
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    background-image:url(/images/logo.png);
+    background-size: cover; /* Couvre toute la page */
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+    background-position: center center;
+    font-size: bold;
+}
+
+header {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+#logo img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+}
+
+section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    color: #ff7e5f;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+#photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#photo img {
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: none;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff7e5f;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Formulaire */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form h3 {
+    color: #ff7e5f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #feb47b;
+}
+
+@media (max-width: 768px) {
+    #photo img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Style par défaut pour les grands écrans */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('/images/logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center; /* Centrer le texte */
+}
+
+header {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+section#photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-img:hover {
+    transform: scale(1.1);
+}
+
+form#addMemberForm {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive design pour tablettes et smartphones */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .product-img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .product-img {
+        width: 130px;
+    }
+
+    form#addMemberForm {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .product-img {
+        width: 100px;
+    }
+
+    section#photo {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .product-img {
+        width: 80px;
+    }
+    
+    section#photo {
+        gap: 5px;
+    }
+}
